@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aggregated Reviews</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Trang tổng hợp ý kiến mua hàng</h1>
+    <div class="controls">
+      <input id="search" placeholder="Tìm kiếm đánh giá..." />
+      <select id="sort">
+        <option value="recent">Mới nhất</option>
+        <option value="helpful">Hữu ích nhất</option>
+        <option value="rating_desc">Đánh giá cao</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="summary">
+      <div class="avg">
+        <div id="avgRating" class="big">4.8</div>
+        <div>Số sao trung bình</div>
+        <div id="totalCount"> (128 đánh giá)</div>
+      </div>
+      <div class="histogram" id="histogram"></div>
+    </section>
+
+    <section class="filters">
+      <label><input type="checkbox" class="star-filter" value="5"> 5 sao</label>
+      <label><input type="checkbox" class="star-filter" value="4"> 4 sao</label>
+      <label><input type="checkbox" class="star-filter" value="3"> 3 sao</label>
+      <label><input type="checkbox" class="star-filter" value="1-2"> 1-2 sao</label>
+    </section>
+
+    <section id="reviews" class="reviews"></section>
+
+    <div class="pagination" id="pagination"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
